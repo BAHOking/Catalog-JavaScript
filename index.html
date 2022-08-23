@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:ital,wght@0,400;0,600;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="body">
+    <div class="container">
+      <section class="section__1">
+        <h1 class="title">Catalog JavaScript</h1>
+        <article class="box time">
+          <h2>Watch*</h2>
+          <p class="time__p"></p>
+          <hr />
+          <p class="p_text">*Годинник <br />(Ukraine/Україна)</p>
+        </article>
+      </section>
+
+      <section class="section__2">
+        <article class="box birthday-date">
+          <h2>Find out how many days are left until your birthday!*</h2>
+          <hr />
+          <p>You need to enter your date of birth (Example 2014-09-19)**</p>
+          <div class="form">
+            <input
+              class="input birthday-date__input"
+              data-length="10"
+              type="text"
+            />
+            <button class="btn birthday-date__btn" onclick="func(this)">
+              Go!
+            </button>
+          </div>
+          <p class="result birthday-date__result">Result:</p>
+          <hr />
+          <p class="p_text">
+            *Дізнайся, скільки залишилося днів до твого дня народження!
+          </p>
+          <p class="p_text">
+            **Потрібно ввести свою дату народження (Приклад 2014-09-19)
+          </p>
+        </article>
+
+        <div>
+          <article class="box stopwatch">
+            <h2>Stopwatch*</h2>
+            <p class="p__i">0</p>
+            <div class="form">
+              <button class="btn btn__start">Go!</button>
+              <button class="btn btn__stop" disabled></button>
+              <button class="btn btn__reset">reset</button>
+            </div>
+            <hr />
+            <p class="p_text">*Секундомір</p>
+          </article>
+
+          <article class="box midnight">
+            <h2>Until midnight left*</h2>
+            <table class="midnight__table">
+              <tr>
+                <th class="midnight__clockHours-title">Hours</th>
+                <th class="midnight__clockMinutes-title">Minutes</th>
+                <th class="midnight__clockSeconds-title">Seconds</th>
+              </tr>
+              <tr>
+                <td class="midnight__clockHours"></td>
+                <td class="midnight__clockMinutes"></td>
+                <td class="midnight__clockSeconds"></td>
+              </tr>
+            </table>
+            <hr />
+            <p class="p_text">*До півночі лишилося</p>
+          </article>
+        </div>
+
+        <article class="box timer">
+          <h2>Timer*</h2>
+          <hr />
+          <p class="p__i timer__p-i">0</p>
+          <p>How many seconds do we set the timer for?**</p>
+          <div class="form timer__form">
+            <input class="input timer__input" type="number" />
+            <button class="btn timer__btn-start">Go!</button>
+          </div>
+          <hr />
+          <p class="p_text">*Таймер</p>
+          <p class="p_text">**На скільки секунд ми ставимо таймер?</p>
+        </article>
+      </section>
+
+      <section class="section__3">
+        <img class="cat" src="images/cat.png" alt="cat" />
+        <article class="box roundabout">
+          <h2>Roundabout*</h2>
+          <div class="roundabout__imgs">
+            <img
+              class="roundabout__img roundabout__img-01"
+              src="images/01.jpg"
+              alt="img-01"
+            />
+            <img
+              class="roundabout__img roundabout__img-02"
+              src="images/02.jpg"
+              alt="img-02"
+            />
+            <img
+              class="roundabout__img roundabout__img-03"
+              src="images/03.jpg"
+              alt="img-03"
+            />
+            <img
+              class="roundabout__img roundabout__img-04"
+              src="images/04.jpg"
+              alt="img-04"
+            />
+            <img
+              class="roundabout__img roundabout__img-05"
+              src="images/05.jpg"
+              alt="img-05"
+            />
+            <img
+              class="roundabout__img roundabout__img-06"
+              src="images/06.jpg"
+              alt="img-06"
+            />
+            <img
+              class="roundabout__img roundabout__img-07"
+              src="images/07.jpg"
+              alt="img-07"
+            />
+            <img
+              class="roundabout__img roundabout__img-08"
+              src="images/08.jpg"
+              alt="img-08"
+            />
+            <img
+              class="roundabout__img roundabout__img-09"
+              src="images/09.jpg"
+              alt="img-09"
+            />
+            <img
+              class="roundabout__img roundabout__img-10"
+              src="images/10.jpg"
+              alt="img-10"
+            />
+          </div>
+          <div class="roundabout__btns">
+            <button class="roundabout__btn-left">Left</button>
+            <button class="btn roundabout__btn-stop">Stop</button>
+            <button class="roundabout__btn-right">Right</button>
+          </div>
+          <hr />
+          <p class="p_text">*Карусель</p>
+        </article>
+      </section>
+
+      <section class="section__4">
+        <article class="box numberWords">
+          <h2>The number of words in the text*</h2>
+          <hr />
+          <p>Copy the text and paste it into the field**</p>
+          <div class="form">
+            <input class="input numberWords__input" type="text" /><br />
+            <button class="btn numberWords__btn">Go!</button>
+          </div>
+          <p class="p__i numberWords__rez">0 word(s)</p>
+          <p>
+            A single character is considered a word <br />
+            (Example ('Q 5 !' = 3 words))***
+          </p>
+          <hr />
+          <p class="p_text">*Кількість слів у тексті</p>
+          <p class="p_text">**Скопіюйте текст і вставте його у поле</p>
+          <p class="p_text">
+            ***Один окремий символ вважається словом (Приклад ('Q 5 !' = 3
+            слова))
+          </p>
+        </article>
+
+        <article class="box calculator">
+          <h2>Calculator*</h2>
+          <div class="calculator__box">
+            <div class="calculator__btn-c">C</div>
+            <div class="calculator__inpyt"></div>
+            <div class="calculator__btns">
+              <div class="calculator__btn btn__num">7</div>
+              <div class="calculator__btn btn__num">8</div>
+              <div class="calculator__btn btn__num">9</div>
+              <div class="calculator__btn btn__sign btn__and">/</div>
+              <div class="calculator__btn btn__num">4</div>
+              <div class="calculator__btn btn__num">5</div>
+              <div class="calculator__btn btn__num">6</div>
+              <div class="calculator__btn btn__sign btn__and">*</div>
+              <div class="calculator__btn btn__num">1</div>
+              <div class="calculator__btn btn__num">2</div>
+              <div class="calculator__btn btn__num">3</div>
+              <div class="calculator__btn btn__sign btn__and">-</div>
+              <div class="calculator__btn btn__num">0</div>
+              <div class="calculator__btn btn__sign">.</div>
+              <div class="calculator__btn btn__rez">=</div>
+              <div class="calculator__btn btn__sign btn__and">+</div>
+            </div>
+          </div>
+
+          <hr />
+          <p class="p_text">*Kалькулятор</p>
+        </article>
+
+        <article class="box calendar">
+          <h2>Ukrainian calendar*</h2>
+          <hr />
+          <div class="calendar__box">
+            <p class="calendar__info"></p>
+            <div class="calendar__box-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="calendar__th">пн</th>
+                    <th class="calendar__th">вт</th>
+                    <th class="calendar__th">ср</th>
+                    <th class="calendar__th">чт</th>
+                    <th class="calendar__th">пт</th>
+                    <th class="calendar__th">сб</th>
+                    <th class="calendar__th">вс</th>
+                  </tr>
+                </thead>
+                <tbody class="calendar__dates"></tbody>
+              </table>
+            </div>
+
+            <div class="calendar__nav">
+              <button class="calendar__prev">&larr;</button>
+              <button class="calendar__next">&rarr;</button>
+            </div>
+            <hr />
+            <p class="p_text">*Український календар</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section__5">
+        <article class="box puzzle">
+          <h2>Puzzle*</h2>
+          <hr />
+          <button class="btn puzzle__btn"></button>
+          <img
+            class="box puzzle__img-hint"
+            src="images/hint.jpg"
+            alt="img-hint"
+            draggable="true"
+          />
+          <div class="puzzle__start-img--box"></div>
+          <div class="puzzle__finish-img--box"></div>
+          <h2 class="puzzle__win">You win!</h2>
+          <hr />
+          <p class="p_text">*Пазл</p>
+        </article>
+      </section>
+    </div>
+
+    <script src="js/light.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/birthday-date.js"></script>
+    <script src="js/stopwatch.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/midnight.js"></script>
+    <script src="js/roundabout.js"></script>
+    <script src="js/numberWords.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/puzzle.js"></script>
+  </body>
+</html>
