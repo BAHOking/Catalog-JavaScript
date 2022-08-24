@@ -90,6 +90,7 @@ for (let i = 0; i < finishImg.length; i++) {
   });
 
   finishImg[i].addEventListener("drop", function (event) {
+    event.preventDefault();
     if (
       finishImg[i].alt ==
       startImg[event.dataTransfer.getData("text", index)].alt
